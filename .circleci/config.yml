@@ -4,7 +4,7 @@ version: 2.1
 
 
 commands:
-  dont-say-hello:
+  hello:
     description: "This is a simple string that won't say Hello!"
     parameters:
       to:
@@ -13,10 +13,19 @@ commands:
     steps:
       - run: echo Hello << parameters.to >>
 
+  not-hello:
+    description: "This is a simple string that won't say Hello!"
+    parameters:
+      to:
+        type: string
+        default: "World"
+    steps:
+      - run: echo Not Hello << parameters.to >>
+
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
-  say-hello:
+  hello-not-hello:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     docker:
@@ -25,8 +34,10 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - dont-say-hello:
+      - hello:
           to: "Shekhar"
+      - not-hello:
+          to: "SHEKHAR ☹️"
 
 
 # Invoke jobs via workflows
@@ -34,4 +45,4 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
-      - say-hello
+      - hello-not-hello
