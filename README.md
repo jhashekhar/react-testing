@@ -1,4 +1,5 @@
 # Getting Started with Create React App
+[![Coverage Status](https://coveralls.io/repos/github/jhashekhar/react-testing/badge.svg?branch=main)](https://coveralls.io/github/jhashekhar/react-testing?branch=main)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
