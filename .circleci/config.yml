@@ -39,7 +39,7 @@ jobs:
       - hello:
           to: "Shekhar"
       - not-hello:
-          to: "SHEKHAR ☹️"
+          to: "SHEKHAR :("
       - run:
           name: install and test
           command: yarn install --immutable --immutable-cache --check-cache && yarn test 
