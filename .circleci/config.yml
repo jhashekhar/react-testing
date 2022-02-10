@@ -39,7 +39,7 @@ jobs:
     steps:
       - checkout
       - hello:
-          to: "Shekhar"
+          to: "Shekhar 😀"
       - not-hello:
           to: "SHEKHAR 🙏🏼"
       - run:
