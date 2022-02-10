@@ -45,7 +45,7 @@ jobs:
       - run:
           name: install and test
           command: yarn install --immutable --immutable-cache --check-cache && yarn test 
-      - coveralls/upload
+      - coveralls/upload:
           path_to_lcov: ./coverage/lcov.info
 
 
