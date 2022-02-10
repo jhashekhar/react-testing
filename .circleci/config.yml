@@ -44,9 +44,8 @@ jobs:
           to: "SHEKHAR 🙏🏼"
       - run:
           name: install and test
-          command: yarn install --immutable --immutable-cache --check-cache && yarn test 
-      - coveralls/upload:
-          path_to_lcov: ./coverage/lcov/project.lcov
+          command: yarn install --immutable --immutable-cache --check-cache && yarn test -- --coverage
+      - coveralls/upload
 
 
 # Invoke jobs via workflows
