@@ -27,7 +27,6 @@ jobs:
       - checkout
       - dontSayHello:
           to: "Shekhar"
-          steps: "echo Hello World"
 
 
 # Invoke jobs via workflows
